@@ -1,7 +1,5 @@
-<body>
-
-      <main>
-        <p id="notice"></p>
+<main>
+        <p id="notice">Signed in successfully.</p>
         <div class='container px-5 px-sm-0'>
   <div class='row'>
     <div class='col-md-3'>
@@ -9,20 +7,20 @@
       <table class='table'>
   <tr><img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg" /></tr>
   <tr>
-	  <th>name</th>
-	  <th>tk</th>
+	  <th></th>
+	  <th></th>
   </tr>
   <tr>
 	  <th>introduction</th>
 	  <th></th>
   </tr>
 </table>
-
+　
 <div class='row'>
   <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_25380" href="/users/25380/edit"></a>
 </div>
       <h2 class="mt-3">New book</h2>
-      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RPxrSKLU/ht4ZWJB+B3F5Zdr1IvMVvOMfVUin7WQlw5RFAAPur9faz141Cj4ffLVrAdyjRiPkHbJR+JSt232NQ==" />
+      <form action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="iiMmr90hDzaAM+J+vwamnJXm4ruZxQ3iBTNrYVbG3iafy03oxUquRsUuVBe/ZpGsropEvU0cbhixIausVDu/HQ==" />
   <div class="form-group">
     <label for="book_title">Title</label>
     <input class="form-control book_title" type="text" name="book[title]" id="book_title" />
@@ -38,20 +36,26 @@
 </form>
     </div>
     <div class='col-md-8 offset-md-1'>
-      <h2>Users</h2>
-      <table class='table'>
+      <h2>Books</h2>
+      <table class='table table-hover table-inverse'>
   <thead>
     <tr>
-      <th>image</th>
-      <th>name</th>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
-      
+      <tr>
+        <td><a href="/users/25380">
+          <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" />
+</a>        </td>
+        <td><a class="book_20287" href="/books/20287">ea</a></td>
+        <td>faes</td>
+      </tr>
   </tbody>
 </table>
-
     </div>
   </div>
 </div>
