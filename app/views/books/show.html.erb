@@ -1,15 +1,23 @@
-<div class='col-md-8 offset-md-1'>
-  		<h2>Book detail</h2>
-  		<table class='table'>
-  		  <tr>
-          <td><a href="/users/26425">
-            <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" /><br>
-            Olivia
-</a>          </td>
-          <td><a href="/books/21140">リーダブルコード</a></td>
-          <td>より良いコードを書くためのシンプルで実践的なテクニック。</td>
-        </tr>
-      </table>
-    </div>
+<div class= "container">
+ <div class= "row">
+  <div class= "col-md-3">
+   <%= render 'users/user', user: @user %>
+   <%= render 'book', book: @booknew %>
   </div>
+  <div class="col-md-8 offset-md-1">
+   <h2>Book detail</h2>
+  		<table class='table'>
+  		 <tr>
+      <td><%= attachment_image_tag @user, :profile_image, :fill,40,40,fallback:"no_image.jpg" %></td>
+      <td><%= link_to @user.name, user_path(@user) %></td>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+      <% if @book.user.id == current_user.id %>
+       <td><%= link_to "Edit", edit_book_path(@book), class:'btn btn-sm btn-success' %></td>
+       <td><%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: "本当に消しますか？"}, class:"btn btn-danger" %></td>
+      <% end %>
+     </tr>
+    </table>
+  </div>
+ </div>
 </div>
